@@ -41,7 +41,7 @@ Your board wants "user evidence" before approving Q3 features. Generate 10 perso
 | Without Persona | With Persona |
 |-----------------|-------------|
 | Weeks of recruiting for interviews | Instant synthetic respondents |
-| Expensive research tools (Qualtrics, Maze) | Zero cost, runs in Claude Code |
+| Expensive research tools (Qualtrics, Maze) | Zero additional cost, runs in Claude Code |
 | Subjective "I think users want..." | Scored, ranked, quote-backed insights |
 | No methodology documentation | ESOMAR-inspired, ACCC-aware reports |
 
@@ -54,10 +54,12 @@ Your board wants "user evidence" before approving Q3 features. Generate 10 perso
 
 ## Installation
 
+Requires [Claude Code](https://claude.ai/claude-code) with skills support.
+
 Copy `SKILL.md` to your Claude Code skills directory:
 
 ```bash
-cp SKILL.md ~/.claude/skills/persona/SKILL.md
+mkdir -p ~/.claude/skills/persona && cp SKILL.md ~/.claude/skills/persona/SKILL.md
 ```
 
 Or clone this repo and link it:
