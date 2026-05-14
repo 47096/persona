@@ -1,6 +1,6 @@
 # Persona
 
-A Claude Code skill that generates synthetic user personas, interviews them with structured questions, and produces a data-driven Markdown report with actionable recommendations.
+A Claude Code skill for persona research. Generates synthetic personas, conducts user interview simulation with structured questions, and produces a data-driven Markdown report with actionable recommendations.
 
 Built for Australian market research contexts — ABS demographics, ACCC-compliant language, ESOMAR-inspired methodology.
 
@@ -83,7 +83,7 @@ Or describe what you need:
 ## How It Works
 
 1. **Generate** — Creates N distinct personas grounded in realistic demographics
-2. **Interview** — Answers your questions in character (scale 0-10 + open-ended)
+2. **Interview** — Persona research in action: each persona answers your questions in character (scale 0-10 + open-ended)
 3. **Report** — Aggregates into a structured Markdown report with tables and themes
 4. **Summary** — Delivers top 3 recommendations and "golden combos" per question
 
