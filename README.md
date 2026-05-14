@@ -87,6 +87,37 @@ Or describe what you need:
 3. **Report** — Aggregates into a structured Markdown report with tables and themes
 4. **Summary** — Delivers top 3 recommendations and "golden combos" per question
 
+## Sample Output
+
+<details>
+<summary>Click to expand — Sample report excerpt (B2B SaaS pricing research, 10 personas)</summary>
+
+### Quantitative Insights
+
+| Question | Avg (0-10) | Median | Top/Bottom Split |
+|----------|------------|--------|------------------|
+| How appealing is the $49/mo Starter tier? | 7.2 | 7 | Solo founders (8.3) vs. Ops managers (5.8) |
+| Would you upgrade to the $149/mo Pro tier? | 6.1 | 6 | Agency owners (8.0) vs. Freelancers (4.2) |
+| How clear is the pricing page layout? | 5.4 | 5 | Technical buyers (7.1) vs. Non-technical (3.9) |
+
+### Qualitative Themes
+
+- **Price anchoring matters more than tier count**: 7/10 personas compared pricing relative to a "reference point" rather than evaluating each tier independently. → *"I didn't pick the best plan — I picked the one that didn't feel like a rip-off compared to the cheap one." (P3, Agency Owner)*
+- **Feature gating creates anxiety**: Non-technical buyers feared hitting limits mid-project. → *"What happens when I hit 500 contacts? Do I get a warning or does the system just stop?" (P7, Marketing Manager)*
+- **Annual discount needs context**: The 20% annual discount didn't resonate without a monthly equivalent. → *"Show me the monthly price first, then tell me I save by going annual. Don't hide the monthly behind a toggle." (P2, Freelancer)*
+
+### Golden Combos
+
+- **Golden tier structure**: 3 tiers with the middle tier highlighted as "Most Popular" — 8/10 personas preferred this over a 4-tier layout
+- **Golden price anchor**: Lead with $49/mo, position $149/mo as "everything you need", make $299/mo feel premium without being absurd
+- **Golden CTA**: "Start free trial — no card required" scored 9.1/10 vs. "Get started" at 5.3/10
+
+### Methodology Note
+
+*Findings based on 10 synthetic personas generated per ABS demographic distributions and provided context. Synthetic data supports ideation and prioritisation; validate with 5-10 real prospects before commercial rollout. Complies with ESOMAR Guidelines and Privacy Act 1988 (Cth) for simulated data.*
+
+</details>
+
 ## License
 
 MIT
