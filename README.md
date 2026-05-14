@@ -4,6 +4,25 @@ A Claude Code skill for persona research. Generates synthetic personas, conducts
 
 Built for Australian market research contexts — ABS demographics, ACCC-compliant language, ESOMAR-inspired methodology.
 
+## What Are Synthetic Personas?
+
+Synthetic personas are fictional characters created by AI to represent real customer segments. Instead of recruiting 10 actual people for interviews (which takes weeks and costs thousands), this skill generates 10 realistic profiles — with jobs, budgets, pain points, and decision-making patterns — and interviews them on your behalf.
+
+Think of it like a flight simulator for customer research. A flight simulator doesn't replace real flying, but it lets pilots test scenarios safely and quickly. Synthetic personas do the same for product decisions: they let you explore how different customer types might react to your pricing, features, or messaging — before you spend money building or selling.
+
+### How Reliable Are the Results?
+
+Synthetic personas are useful, but they're not a replacement for real customer research. Here's what to trust and what to validate:
+
+| Trust | Validate |
+|-------|----------|
+| Directional signals (e.g., "price-sensitive segment exists") | Exact numbers (e.g., "73% prefer $49/mo") |
+| Pattern detection across personas | Individual persona opinions |
+| Feature prioritisation and ranking | Final pricing or positioning decisions |
+| Hypothesis generation | Hypothesis confirmation |
+
+**Bottom line:** Use synthetic personas to narrow your options and sharpen your questions — then validate the final decision with 5-10 real customers. The skill produces insights, not proof. Treat it as the start of your research, not the end.
+
 ## Use Cases
 
 ### 1. Co-Founder Alignment Sessions
