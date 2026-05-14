@@ -2,7 +2,7 @@
 
 A Claude Code skill that generates synthetic user personas, interviews them with structured questions, and produces a data-driven Markdown report with actionable recommendations.
 
-Built for Australian market research contexts — ABS demographics, ACCC-compliant language, ESOMAR-aligned methodology.
+Built for Australian market research contexts — ABS demographics, ACCC-compliant language, ESOMAR-inspired methodology.
 
 ## Use Cases
 
@@ -43,7 +43,7 @@ Your board wants "user evidence" before approving Q3 features. Generate 10 perso
 | Weeks of recruiting for interviews | Instant synthetic respondents |
 | Expensive research tools (Qualtrics, Maze) | Zero cost, runs in Claude Code |
 | Subjective "I think users want..." | Scored, ranked, quote-backed insights |
-| No methodology documentation | ESOMAR-aligned, ACCC-ready reports |
+| No methodology documentation | ESOMAR-inspired, ACCC-aware reports |
 
 ## Impact
 
@@ -114,7 +114,7 @@ Or describe what you need:
 
 ### Methodology Note
 
-*Findings based on 10 synthetic personas generated per ABS demographic distributions and provided context. Synthetic data supports ideation and prioritisation; validate with 5-10 real prospects before commercial rollout. Complies with ESOMAR Guidelines and Privacy Act 1988 (Cth) for simulated data.*
+*Findings based on 10 synthetic personas generated per ABS demographic distributions and provided context. Synthetic data supports ideation and prioritisation; validate with 5-10 real prospects before commercial rollout. Inspired by ESOMAR research principles. Outputs are synthetic — do not use in advertising claims. Refer to Australian Privacy Principles (APPs) for data handling.*
 
 </details>
 
