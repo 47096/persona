@@ -84,7 +84,7 @@ mkdir -p ~/.claude/skills/persona && cp SKILL.md ~/.claude/skills/persona/SKILL.
 Or clone this repo and link it:
 
 ```bash
-git clone https://github.com/wsamuelw/persona.git ~/.claude/skills/persona
+git clone https://github.com/47096/persona.git ~/.claude/skills/persona
 ```
 
 ## Usage
