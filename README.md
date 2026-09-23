@@ -12,16 +12,33 @@ Synthetic results are **hypotheses, not proof**. Use them to rank and spot patte
 - **Honest scores** — mid scores, `unsure`, and refusals allowed; no cheerleading
 - **Guardrails** — fixed report shape + `scripts/check_report.py` blocks overclaims like “statistically significant”
 
-## Sample (abridged)
+## Samples (abridged)
 
-| Question | Avg (0–10) | Top / bottom |
-|----------|------------|--------------|
+**1 — Pricing** (10 buyers, meal kit €49/week)
+
+| Question | Avg | Split |
+|----------|-----|-------|
 | Subscribe at €49/week? | 6.4 | Busy PM (8) vs student (3) |
 
-- **Theme** — Weeknight-only demand. → *“I’d pay for three dinners, not seven.”* (P2, PM)
-- **Takeaway** — Pilot a 3-night plan; 4/10 asked for partial boxes.
+- **Takeaway** — Pilot a 3-night plan; 4/10 asked for partial boxes. → *“I’d pay for three dinners, not seven.”* (P2, PM)
 
-*Synthetic personas — not real buyers. Validate before you charge.*
+**2 — Roadmap** (8 PMs, B2B SaaS features)
+
+| Question | Avg | Split |
+|----------|-----|-------|
+| Ship SSO in Q3? | 7.8 | IT lead (9) vs solo founder (5) |
+
+- **Takeaway** — SSO for the enterprise tier first. → *“I can’t sell to security without it.”* (P5, IT lead)
+
+**3 — Play** (6 fantasy NPCs, sell to a suspicious hero?)
+
+| Question | Avg | Split |
+|----------|-----|-------|
+| Sell to this hero? | 5.2 | Fence (9) vs temple merchant (2) |
+
+- **Takeaway** — Gate the magic shop behind a favour. → *“Heroes break things. Heroes don’t pay.”* (P4, Armorer)
+
+*Synthetic personas — not real respondents. Validate money decisions with real people.*
 
 ## Use cases
 
