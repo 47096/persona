@@ -96,10 +96,52 @@ rm -rf ~/.claude/skills/persona
 
 ## How it works
 
-1. **Generate** — N distinct personas (research 5–10; play ensembles up to 30)
-2. **Interview** — each answers in character (0–10 scales + open)
-3. **Report** — scoreboard, themes, takeaways, golden combos, honesty footnote
-4. **Summary** — cast overview + top takeaways
+Four phases: **GENERATE → INTERVIEW → REPORT → SUMMARY**. One loop for research and play; tone and footnotes change, score honesty does not.
+
+### 1. Generate
+
+You bring `n`, questions, and a brief (product, scene, or cast rules). The skill asks for anything missing — it won’t silently invent a market.
+
+Each persona gets an id (`P1`…), name and hook, role or life context, resources (money, time, power), goals and fears, constraints, decision style, deal-breakers, and a one-line voice note.
+
+Rules that keep the cast useful:
+
+- **Real differences** — budget power, time pressure, temperament, risk; not just age and job title
+- **Research** (`n` 5–10): at least one price-sensitive, one time-poor, one risk-averse profile
+- **Play** (5–12, ensembles up to 30): at least one wildcard (chaotic, petty, literal, or hostile)
+- Locale only if the brief needs it — no default country
+
+### 2. Interview
+
+Every persona answers every question **in character**:
+
+| Question type | Answer |
+|---------------|--------|
+| **Scale** | Integer 0–10 + 1–2 sentences tied to their goals/fears |
+| **Open** | 1–3 sentences in their voice |
+
+They stay consistent across the run. They’re allowed to be wrong, biased, bored, or hostile. Mid scores, `unsure`, and refusal are real answers — not failures. Uniform 8–10 cheerleading is treated as a bug.
+
+### 3. Report
+
+One Markdown report in chat (saved to a file if you want):
+
+1. **Executive summary** — headline, main friction (or punchline), standout persona  
+2. **Scoreboard** — avg, median, top/bottom split per question  
+3. **Themes** — patterns with verbatim quotes and persona ids  
+4. **Takeaways** — ranked actions/lessons, each backed by counts (`6/10`) or a theme  
+5. **Golden combos** — the option/wording/structure that wins across the cast, plus who disagreed  
+6. **Footnote** — synthetic-data disclaimer; validate with real people before money or PR  
+
+Optional: `scripts/check_report.py` asserts that skeleton and blocks overclaims (“statistically significant” and friends).
+
+### 4. Summary
+
+After the report: who the cast is in a few sentences, numbered key findings, top takeaways ranked by impact, and a golden combo per major question.
+
+### Follow-ups
+
+Same cast stays on the bench. Ask more (“what jobs do they hire this for?”, “where do we meet them?”) and you get counts + a short golden combo — no re-rolling the world unless you ask.
 
 ## License
 
