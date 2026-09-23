@@ -1,4 +1,4 @@
-# Persona
+# Persona — customer interviews in minutes
 
 **Customer interviews in minutes, not weeks** — synthetic personas, interviewed in character, delivered as a scored Markdown report with quotes and takeaways.
 
@@ -11,8 +11,11 @@ Synthetic results are **hypotheses, not proof**. Use them to rank and spot patte
 - **Diverse cast** — forced different jobs, budgets, and temperaments (not five clones who all love you)
 - **Honest scores** — mid scores, `unsure`, and refusals allowed; no cheerleading
 - **Guardrails** — fixed report shape + `scripts/check_report.py` blocks overclaims like “statistically significant”
+- **Named judges** — ten consistent people with voices, plus follow-ups on the same cast (no silent re-roll)
 
 ## Samples (abridged)
+
+*“Split” = who scored high vs low. “Golden combo” = what won across the cast.*
 
 **1 — Pricing** (10 buyers, meal kit €49/week)
 
@@ -38,7 +41,25 @@ Synthetic results are **hypotheses, not proof**. Use them to rank and spot patte
 
 - **Takeaway** — Gate the magic shop behind a favour. → *“Heroes break things. Heroes don’t pay.”* (P4, Armorer)
 
-*Synthetic personas — not real respondents. Validate money decisions with real people.*
+## Install
+
+```bash
+mkdir -p ~/.claude/skills/persona/scripts
+curl -fsSL https://raw.githubusercontent.com/47096/persona/main/SKILL.md \
+  -o ~/.claude/skills/persona/SKILL.md
+curl -fsSL https://raw.githubusercontent.com/47096/persona/main/scripts/check_report.py \
+  -o ~/.claude/skills/persona/scripts/check_report.py
+```
+
+Requires [Claude Code](https://claude.ai/claude-code). Only `SKILL.md` + `scripts/` go in the skill folder — do **not** `git clone` this repo into `~/.claude/skills/persona`.
+
+Then in Claude Code: `/persona`, or describe what you want (see use cases below).
+
+## Remove
+
+```bash
+rm -rf ~/.claude/skills/persona
+```
 
 ## Use cases
 
@@ -54,7 +75,7 @@ The pattern is always the same: **hire a cast → interview in character → lea
 
 4. **Content that converts** — “Write for everyone” is writing for no one. Cast roles and seniorities, then ask what they’d click, skip, share, or mock. Get a calendar angle per persona and the phrases that make them bounce. *Spin-off: newsletter subject lines, conference talk abstracts, onboarding emails.*
 
-5. **Roadmap stakeholder theatre** — The board wants “user evidence.” Score the Q3 list across segments and show who wants what, with quotes. Better: use it to *cut* the list to three bets, then validate those with 5–10 real users. *Spin-off: RFC pushback simulation, procurement/security review cosplay.*
+5. **Roadmap stakeholder theatre** — The board wants “user evidence.” Score the Q3 list across segments and show who wants what, with quotes. Better: use it to *cut* the list to three bets, then validate those with real users. *Spin-off: RFC pushback simulation, procurement/security review cosplay.*
 
 6. **Landing page & CTA pressure test** — Five visitors, ten seconds each: what do they think you sell, what’s the first objection, which CTA earns a click? Cheap way to kill a clever-but-cryptic hero before launch. *Spin-off: onboarding friction, paywall wording, support macro tone.*
 
@@ -72,76 +93,51 @@ The pattern is always the same: **hire a cast → interview in character → lea
 
 12. **Story & character continuity** — Keep a cast of 10–30 and ask follow-ups across scenes: who would lie here, who would crack, who would escalate? Cheap beta readers for motivation and consistency before you write the draft. *Spin-off: RPG campaign arcs, marketing mascot voice, alternate endings.*
 
-**Invent your own:** any decision where you’d like **ten consistent judges with names** — and a written summary — is in scope. If it’s a real-money or real-reputation call, use this to sharpen questions, then talk to humans.
-
-## Install
-
-```bash
-mkdir -p ~/.claude/skills/persona/scripts
-curl -fsSL https://raw.githubusercontent.com/47096/persona/main/SKILL.md \
-  -o ~/.claude/skills/persona/SKILL.md
-curl -fsSL https://raw.githubusercontent.com/47096/persona/main/scripts/check_report.py \
-  -o ~/.claude/skills/persona/scripts/check_report.py
-```
-
-Requires [Claude Code](https://claude.ai/claude-code). Only `SKILL.md` + `scripts/` go in the skill folder — do **not** `git clone` this repo into `~/.claude/skills/persona`.
-
-Then in Claude Code: `/persona`, or describe what you want (see use cases above).
-
-## Remove
-
-```bash
-rm -rf ~/.claude/skills/persona
-```
+**Invent your own:** any decision where you’d like **ten consistent judges with names** — and a written summary — is in scope.
 
 ## How it works
 
-Four phases: **GENERATE → INTERVIEW → REPORT → SUMMARY**. One loop for research and play; tone and footnotes change, score honesty does not.
+Four phases: **GENERATE → INTERVIEW → REPORT → SUMMARY**. Research and play share the loop; tone changes, score honesty does not.
 
 ### 1. Generate
 
-You bring `n`, questions, and a brief (product, scene, or cast rules). The skill asks for anything missing — it won’t silently invent a market.
+You bring `n`, questions, and a brief. The skill asks for anything missing.
 
-Each persona gets an id (`P1`…), name and hook, role or life context, resources (money, time, power), goals and fears, constraints, decision style, deal-breakers, and a one-line voice note.
-
-Rules that keep the cast useful:
-
-- **Real differences** — budget power, time pressure, temperament, risk; not just age and job title
-- **Research** (`n` 5–10): at least one price-sensitive, one time-poor, one risk-averse profile
-- **Play** (5–12, ensembles up to 30): at least one wildcard (chaotic, petty, literal, or hostile)
-- Locale only if the brief needs it — no default country
+Personas differ on **budget power, time pressure, temperament, and risk** — not just age and job title. Research (`n` 5–10) includes price-sensitive, time-poor, and risk-averse profiles. Play (5–12, ensembles to 30) includes a wildcard. Locale only if the brief needs it.
 
 ### 2. Interview
 
-Every persona answers every question **in character**:
+Each persona answers every question in character:
 
-| Question type | Answer |
-|---------------|--------|
-| **Scale** | Integer 0–10 + 1–2 sentences tied to their goals/fears |
+| Type | Answer |
+|------|--------|
+| **Scale** | 0–10 + 1–2 sentences tied to their goals/fears |
 | **Open** | 1–3 sentences in their voice |
 
-They stay consistent across the run. They’re allowed to be wrong, biased, bored, or hostile. Mid scores, `unsure`, and refusal are real answers — not failures. Uniform 8–10 cheerleading is treated as a bug.
+They can be wrong, biased, bored, or hostile. Mid scores, `unsure`, and refusal are real answers. Uniform 8–10 cheerleading is a bug.
 
 ### 3. Report
 
-One Markdown report in chat (saved to a file if you want):
+1. **Executive summary** — headline, friction (or punchline), standout persona  
+2. **Scoreboard** — avg, median, top/bottom split  
+3. **Themes** — patterns with quotes and persona ids  
+4. **Takeaways** — ranked, backed by counts (`6/10`) or a theme  
+5. **Golden combos** — what won across the cast, plus who disagreed  
+6. **Footnote** — synthetic disclaimer; validate with real people before money or PR  
 
-1. **Executive summary** — headline, main friction (or punchline), standout persona  
-2. **Scoreboard** — avg, median, top/bottom split per question  
-3. **Themes** — patterns with verbatim quotes and persona ids  
-4. **Takeaways** — ranked actions/lessons, each backed by counts (`6/10`) or a theme  
-5. **Golden combos** — the option/wording/structure that wins across the cast, plus who disagreed  
-6. **Footnote** — synthetic-data disclaimer; validate with real people before money or PR  
+Optional: `scripts/check_report.py` checks that skeleton and blocks overclaims.
 
-Optional: `scripts/check_report.py` asserts that skeleton and blocks overclaims (“statistically significant” and friends).
+### 4. Summary + follow-ups
 
-### 4. Summary
+Cast overview, key findings, top takeaways, golden combos per question. Follow-ups stay on the same cast unless you ask for a re-roll.
 
-After the report: who the cast is in a few sentences, numbered key findings, top takeaways ranked by impact, and a golden combo per major question.
+## Not for
 
-### Follow-ups
+Published market-size stats, legal proof, or replacing live customer interviews. Use it to sharpen questions — then talk to humans.
 
-Same cast stays on the bench. Ask more (“what jobs do they hire this for?”, “where do we meet them?”) and you get counts + a short golden combo — no re-rolling the world unless you ask.
+## Feedback
+
+Ideas and issues → [GitHub Issues](https://github.com/47096/persona/issues).
 
 ## License
 
