@@ -1,10 +1,27 @@
 # Persona
 
-Claude Code skill: generate a cast of synthetic personas, interview them in character, get a scored Markdown report.
+**Customer interviews in minutes, not weeks** — synthetic personas, interviewed in character, delivered as a scored Markdown report with quotes and takeaways.
 
-**Research** (pricing, messaging, roadmaps) or **play** (game NPCs, fiction, dinner parties, roasts). Works worldwide — no default country.
+For **indie founders & PMs** who need a call before real user research, and **writers & game makers** who want a cast that argues back. A Claude Code skill. Works worldwide.
 
-Synthetic results are **hypotheses, not proof**. Great for ranking and spotting patterns; validate money decisions with real people.
+Synthetic results are **hypotheses, not proof**. Use them to rank and spot patterns; validate money decisions with real people.
+
+## Why this skill (not a freeform prompt)
+
+- **Diverse cast** — forced different jobs, budgets, and temperaments (not five clones who all love you)
+- **Honest scores** — mid scores, `unsure`, and refusals allowed; no cheerleading
+- **Guardrails** — fixed report shape + `scripts/check_report.py` blocks overclaims like “statistically significant”
+
+## Sample (abridged)
+
+| Question | Avg (0–10) | Top / bottom |
+|----------|------------|--------------|
+| Subscribe at €49/week? | 6.4 | Busy PM (8) vs student (3) |
+
+- **Theme** — Weeknight-only demand. → *“I’d pay for three dinners, not seven.”* (P2, PM)
+- **Takeaway** — Pilot a 3-night plan; 4/10 asked for partial boxes.
+
+*Synthetic personas — not real buyers. Validate before you charge.*
 
 ## Use cases
 
@@ -34,7 +51,7 @@ curl -fsSL https://raw.githubusercontent.com/47096/persona/main/scripts/check_re
   -o ~/.claude/skills/persona/scripts/check_report.py
 ```
 
-Only `SKILL.md` + `scripts/` go in the skill folder. Do **not** `git clone` this repo into `~/.claude/skills/persona` (that pulls in `README.md` / `LICENSE` and breaks the package).
+Requires [Claude Code](https://claude.ai/claude-code). Only `SKILL.md` + `scripts/` go in the skill folder — do **not** `git clone` this repo into `~/.claude/skills/persona`.
 
 ## Remove
 
@@ -57,8 +74,6 @@ In Claude Code: `/persona`, or just ask.
 2. **Interview** — each answers in character (0–10 scales + open)
 3. **Report** — scoreboard, themes, takeaways, golden combos, honesty footnote
 4. **Summary** — cast overview + top takeaways
-
-`scripts/check_report.py` can validate report shape and block overclaims.
 
 ## License
 
