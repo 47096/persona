@@ -1,141 +1,227 @@
 # Persona
 
-A Claude Code skill for persona research. Generates synthetic personas, conducts user interview simulation with structured questions, and produces a data-driven Markdown report with actionable recommendations.
+A Claude Code skill for synthetic personas — anywhere, for work or play. Generate a cast, interview them in character (scales + open answers), and get a Markdown report with scores, themes, and takeaways.
 
-Built for Australian market research contexts — ABS demographics, ACCC-compliant language, ESOMAR-inspired methodology.
+Works worldwide. Use it for product research (pricing, messaging, features) or for fun (game NPCs, fiction, dinner parties, debate panels, roast sessions). No default country.
 
 ## What Are Synthetic Personas?
 
-Synthetic personas are fictional characters created by AI to represent real customer segments. Instead of recruiting 10 actual people for interviews (which takes weeks and costs thousands), this skill generates 10 realistic profiles — with jobs, budgets, pain points, and decision-making patterns — and interviews them on your behalf.
+Synthetic personas are fictional characters created by AI to stand in for real customer segments — or for any cast you invent. Instead of recruiting 10 people for interviews (weeks, thousands of dollars), this skill builds 10 distinct profiles — jobs, budgets, fears, decision patterns — and interviews them on your behalf.
 
-Think of it like a flight simulator for customer research. A flight simulator doesn't replace real flying, but it lets pilots test scenarios safely and quickly. Synthetic personas do the same for product decisions: they let you explore how different customer types might react to your pricing, features, or messaging — before you spend money building or selling.
+Think of it like a flight simulator. A simulator doesn’t replace real flying, but it lets pilots test scenarios safely and quickly. Synthetic personas do the same for product decisions — and they’re also a fast way to pressure-test stories, games, and “what if” social scenarios.
 
 ### How Reliable Are the Results?
 
-Synthetic personas are useful, but they're not a replacement for real customer research. Here's what to trust and what to validate:
+Useful, but not a replacement for real people when money or reputation is on the line:
 
 | Trust | Validate |
 |-------|----------|
-| Directional signals (e.g., "price-sensitive segment exists") | Exact numbers (e.g., "73% prefer $49/mo") |
-| Pattern detection across personas | Individual persona opinions |
+| Directional signals (e.g. a price-sensitive segment exists) | Exact numbers (e.g. “73% prefer $49/mo”) |
+| Pattern detection across the cast | Individual persona opinions |
 | Feature prioritisation and ranking | Final pricing or positioning decisions |
 | Hypothesis generation | Hypothesis confirmation |
 
-**Bottom line:** Use synthetic personas to narrow your options and sharpen your questions — then validate the final decision with 5-10 real customers. The skill produces insights, not proof. Treat it as the start of your research, not the end.
+**Bottom line:** Narrow options and sharpen questions — then validate the final call with 5–10 real humans (for research). For play, have fun; just don’t dress fiction up as market data.
+
+## Two flavours
+
+| Flavour | Good for | Tone |
+|---------|----------|------|
+| **Research** | pricing pages, messaging, roadmaps, content | Decision-ready, validation-minded |
+| **Play** | game NPCs, fiction, parties, debates, roasts | Same structure, more voice and comedy |
 
 ## Use Cases
 
-### 1. Co-Founder Alignment Sessions
+### Research
 
-Two co-founders disagree on which customer segment to target first. Generate 8 personas across both segments, interview them on the same value propositions, and let the data decide — not the loudest voice in the room.
+1. **Co-founder alignment** — two segments, one scorecard, less loudest-voice-in-the-room.
+2. **Pricing before code** — test tier structures and price anchors before building the page.
+3. **Competitive positioning** — map rivals as personas; find switching triggers and objections.
+4. **Content strategy** — what each role would click, share, and save.
+5. **Roadmap “user evidence”** — score proposed features across the cast (still validate before the board deck ships).
 
-**Impact:** Turns subjective founder debates into objective scorecards. Prevents the #1 startup killer: building for the wrong audience because co-founders couldn't agree.
+### Play
 
-### 2. Pricing Page A/B Testing (Before Code)
-
-You're about to spend three weeks building a pricing page with four tiers. Before that, generate personas matching your buyer profiles, present each tier configuration, and find the "golden price anchor" — the tier structure that maximises perceived value across segments.
-
-**Impact:** Saves 3 weeks of dev time if the data says your 4-tier model confuses people. You launch with the right structure from day one.
-
-### 3. Competitive Positioning War Games
-
-Map your top 3 competitors as personas with their real traits (budget, priorities, objections). Then generate your ideal customer personas and interview them on switching triggers, deal-breakers, and the "golden argument" that wins them over.
-
-**Impact:** You walk into sales calls knowing exactly which objection to address first and which competitor weakness to exploit — without waiting for real lost deals to teach you.
-
-### 4. Content Strategy Persona Mapping
-
-You're planning a 6-month content calendar but writing for everyone means writing for no one. Generate personas by role, seniority, and content preference. Interview them on what they'd actually click, share, and save.
-
-**Impact:** Each blog post, email, and LinkedIn thread targets a specific persona's trigger. Content becomes a conversion tool instead of a vanity metric generator.
-
-### 5. Product Roadmap Stakeholder Simulation
-
-Your board wants "user evidence" before approving Q3 features. Generate 10 personas representing your core segments, run them through your proposed features, and produce a report showing which features score highest and why.
-
-**Impact:** Turns "we think users want X" into "8/10 personas scored Feature A at 8.5/10 with these specific reasons." Boards approve faster when they see numbers, not hunches.
+6. **Game NPCs** — will these shopkeepers trust the suspicious hero?
+7. **Dinner party** — historical figures (or friends) on a topic: who derails the table?
+8. **Debate panel** — force disagreement; find the golden compromise or the fight.
+9. **Roast / critique** — five very different haters on your landing page or dating profile.
+10. **Ensemble cast** — up to 30 characters for story consistency checks.
 
 ## Value
 
 | Without Persona | With Persona |
 |-----------------|-------------|
-| Weeks of recruiting for interviews | Instant synthetic respondents |
-| Expensive research tools (Qualtrics, Maze) | Zero additional cost, runs in Claude Code |
-| Subjective "I think users want..." | Scored, ranked, quote-backed insights |
-| No methodology documentation | ESOMAR-inspired, ACCC-aware reports |
+| Weeks of recruiting (research) | Instant synthetic cast |
+| Expensive panels and tools | Runs in Claude Code |
+| “I think users want…” | Scored, ranked, quote-backed output |
+| No structured write-up | Report template + honesty footnote |
 
 ## Impact
 
-- **Speed:** 15-minute research cycle vs. 2-4 week traditional recruitment
-- **Cost:** $0 vs. $2k-10k for research panels or tools
-- **Decision quality:** Quantitative scores + qualitative themes reduce assumption-driven mistakes
-- **Repeatability:** Run the same questions across different contexts to compare segments
+- **Speed:** minutes, not 2–4 weeks of recruitment
+- **Cost:** $0 beyond your Claude usage
+- **Decision quality:** scores + themes cut assumption-driven mistakes (research)
+- **Fun:** playable casts for games, stories, and social experiments
 
 ## Installation
 
 Requires [Claude Code](https://claude.ai/claude-code) with skills support.
 
-Copy `SKILL.md` to your Claude Code skills directory:
+Install **`SKILL.md`** (and optionally `scripts/`). Do **not** copy `README.md` or `LICENSE` into the skills folder.
+
+### Option A — one-liner (no clone)
 
 ```bash
-mkdir -p ~/.claude/skills/persona && cp SKILL.md ~/.claude/skills/persona/SKILL.md
+mkdir -p ~/.claude/skills/persona/scripts
+curl -fsSL https://raw.githubusercontent.com/47096/persona/main/SKILL.md \
+  -o ~/.claude/skills/persona/SKILL.md
+# optional report checker
+curl -fsSL https://raw.githubusercontent.com/47096/persona/main/scripts/check_report.py \
+  -o ~/.claude/skills/persona/scripts/check_report.py
 ```
 
-Or clone this repo and link it:
+### Option B — from a local copy of this repo
 
 ```bash
+mkdir -p ~/.claude/skills/persona
+cp SKILL.md ~/.claude/skills/persona/
+cp -R scripts ~/.claude/skills/persona/
+```
+
+### Option C — clone somewhere else, then copy
+
+```bash
+git clone https://github.com/47096/persona.git ~/src/persona
+mkdir -p ~/.claude/skills/persona
+cp ~/src/persona/SKILL.md ~/.claude/skills/persona/
+cp -R ~/src/persona/scripts ~/.claude/skills/persona/
+```
+
+### Do not clone into the skills folder
+
+```bash
+# Wrong — pulls README.md and LICENSE into the skill package
 git clone https://github.com/47096/persona.git ~/.claude/skills/persona
 ```
 
+If you already did that:
+
+```bash
+rm -f ~/.claude/skills/persona/README.md ~/.claude/skills/persona/LICENSE
+```
+
+After install, the folder should hold `SKILL.md` and optionally `scripts/check_report.py`, nothing else from GitHub.
+
 ## Usage
 
-In Claude Code, invoke with:
+In Claude Code:
 
 ```
 /persona
 ```
 
-Or describe what you need:
+Or just ask:
 
-- "Create 5 personas for a B2B accounting app targeting small business owners in Sydney"
-- "Generate personas and interview them on pricing sensitivity"
-- "Run persona research on a meal kit delivery service in Melbourne"
+**Research**
+
+- “Create 5 personas for a B2B accounting app targeting small business owners in Berlin”
+- “Generate personas and interview them on pricing sensitivity for $29/$99/$199”
+- “Run persona research on a meal-kit service in São Paulo”
+
+**Play**
+
+- “6 fantasy shopkeeper NPCs — would they sell to a suspicious hero?”
+- “Dinner party: 5 historical figures on AI. Who derails the table?”
+- “Roast my landing page as five very different people”
 
 ## How It Works
 
-1. **Generate** — Creates N distinct personas grounded in realistic demographics
-2. **Interview** — Persona research in action: each persona answers your questions in character (scale 0-10 + open-ended)
-3. **Report** — Aggregates into a structured Markdown report with tables and themes
-4. **Summary** — Delivers top 3 recommendations and "golden combos" per question
+1. **Generate** — N distinct personas (research default 5–10; play ensembles up to 30)
+2. **Interview** — each answers in character (0–10 scales + open)
+3. **Report** — scoreboard, themes with quotes, takeaways, golden combos
+4. **Summary** — cast overview, key findings, top takeaways
+
+Optional: `check_report.py` validates report structure and honesty markers.
 
 ## Sample Output
 
 <details>
-<summary>Click to expand — Sample report excerpt (B2B SaaS pricing research, 10 personas)</summary>
+<summary>Click to expand — research sample (B2B SaaS pricing, 10 personas)</summary>
 
-### Quantitative Insights
+### Executive Summary
 
-| Question | Avg (0-10) | Median | Top/Bottom Split |
-|----------|------------|--------|------------------|
-| How appealing is the $49/mo Starter tier? | 7.2 | 7 | Solo founders (8.3) vs. Ops managers (5.8) |
-| Would you upgrade to the $149/mo Pro tier? | 6.1 | 6 | Agency owners (8.0) vs. Freelancers (4.2) |
-| How clear is the pricing page layout? | 5.4 | 5 | Technical buyers (7.1) vs. Non-technical (3.9) |
+- Starter tier is attractive; Pro upgrade is conditional on clear limits
+- Feature-gate anxiety is the main friction for non-technical buyers
+- Solo founders and agency owners want different anchors
 
-### Qualitative Themes
+### Scoreboard
 
-- **Price anchoring matters more than tier count**: 7/10 personas compared pricing relative to a "reference point" rather than evaluating each tier independently. → *"I didn't pick the best plan — I picked the one that didn't feel like a rip-off compared to the cheap one." (P3, Agency Owner)*
-- **Feature gating creates anxiety**: Non-technical buyers feared hitting limits mid-project. → *"What happens when I hit 500 contacts? Do I get a warning or does the system just stop?" (P7, Marketing Manager)*
-- **Annual discount needs context**: The 20% annual discount didn't resonate without a monthly equivalent. → *"Show me the monthly price first, then tell me I save by going annual. Don't hide the monthly behind a toggle." (P2, Freelancer)*
+| Question | Avg (0-10) | Median | Top / bottom split |
+|----------|------------|--------|--------------------|
+| How appealing is the $49/mo Starter tier? | 7.2 | 7 | Solo founders (8.3) vs ops managers (5.8) |
+| Would you upgrade to the $149/mo Pro tier? | 6.1 | 6 | Agency owners (8.0) vs freelancers (4.2) |
+| How clear is the pricing page layout? | 5.4 | 5 | Technical buyers (7.1) vs non-technical (3.9) |
+
+### Themes
+
+- **Price anchoring over tier count** — 7/10 compared plans to a reference price, not in isolation. → *“I picked the one that didn’t feel like a rip-off compared to the cheap one.” (P3, Agency owner)*
+- **Feature gating creates anxiety** — non-technical buyers feared silent limits. → *“What happens when I hit 500 contacts — a warning, or does it just stop?” (P7, Marketing manager)*
+- **Annual discount needs a monthly frame** — 20% off annual didn’t land without a monthly equivalent. → *“Show monthly first, then tell me I save going annual.” (P2, Freelancer)*
+
+### Takeaways
+
+1. **Ship 3 tiers, highlight the middle** — 8/10 preferred that over 4 tiers. Next step: mock this layout.
+2. **Lead with $49/mo** — keep $149 as “everything you need”. Next step: rewrite the price page hero.
+3. **Replace “Get started”** — “Start free trial — no card required” won the CTA battle in this cast. Next step: A/B with real traffic.
 
 ### Golden Combos
 
-- **Golden tier structure**: 3 tiers with the middle tier highlighted as "Most Popular" — 8/10 personas preferred this over a 4-tier layout
-- **Golden price anchor**: Lead with $49/mo, position $149/mo as "everything you need", make $299/mo feel premium without being absurd
-- **Golden CTA**: "Start free trial — no card required" scored 9.1/10 vs. "Get started" at 5.3/10
+- **Golden tier structure** — 3 tiers, middle marked Most Popular (8/10)
+- **Golden price ladder** — $49 lead → $149 core → $299 premium without absurdity
+- **Golden CTA** — “Start free trial — no card required”
 
-### Methodology Note
+### Footnote
 
-*Findings based on 10 synthetic personas generated per ABS demographic distributions and provided context. Synthetic data supports ideation and prioritisation; validate with 5-10 real prospects before commercial rollout. Inspired by ESOMAR research principles. Outputs are synthetic — do not use in advertising claims. Refer to Australian Privacy Principles (APPs) for data handling.*
+*Synthetic personas (N=10) for a B2B SaaS pricing brief, based on the provided context — not real respondents. Ideate and prioritise only; validate with real buyers before spending money or publishing claims. Follow local advertising and research rules for anything commercial.*
+
+</details>
+
+<details>
+<summary>Click to expand — play sample (fantasy shopkeeper NPCs, 6 personas)</summary>
+
+### Executive Summary
+
+- Three will deal with a suspicious hero; three need cover stories or bribes
+- Trust is currency; inventory risk beats profit for the paranoid
+- The wildcard fence is the most interesting quest hook
+
+### Scoreboard
+
+| Question | Avg (0-10) | Median | Top / bottom split |
+|----------|------------|--------|--------------------|
+| Would you sell to this hero? | 5.2 | 5.5 | Fence (9) vs temple merchant (2) |
+| How risky does the deal feel? | 7.1 | 7 | Everyone high — law still matters |
+
+### Themes
+
+- **Coin first, legend second** — most care about not getting robbed. → *“Heroes break things. Heroes don’t pay for broken things.” (P4, Armorer)*
+- **One wildcard is enough chaos** — the fence will launder the plot. → *“If it glows, I don’t ask. If it glows *and* whispers, I charge extra.” (P6, Fence)*
+
+### Takeaways
+
+1. **Gate the magic shop behind a favour** — 4/6 won’t sell openly.
+2. **Let the fence move the quest** — best hook for a second act.
+3. **Keep the temple merchant hostile** — useful moral foil.
+
+### Golden Combos
+
+- **Golden opener** — buy something boring first, then ask about the glowing item
+- **Golden bribe** — information over gold for 5/6
+
+### Footnote
+
+*Synthetic characters (N=6) for a fantasy game brief — fiction, not market evidence. Not real respondents. Safe for entertainment and design prototyping; don’t cite as player research without real playtests.*
 
 </details>
 
