@@ -42,21 +42,37 @@ Synthetic results are **hypotheses, not proof**. Use them to rank and spot patte
 
 ## Use cases
 
+The pattern is always the same: **hire a cast → interview in character → leave with scores, quotes, and a golden combo.** Swap the cast and the questions. If it helps to hear ten different people react to a decision, this skill fits.
+
 **Commercial / business**
 
-1. **Pricing tiers** — test anchors and “most popular” structure before you build the page
-2. **Co-founder alignment** — score two target segments; stop debating from gut feel
-3. **Competitive positioning** — map rivals as personas; find switching triggers and objections
-4. **Content strategy** — what each role would click, share, or ignore
-5. **Roadmap ranking** — which features score highest across your buyer types (validate before the board deck)
+1. **Pricing page before code** — You’re tempted to ship four tiers and a toggle for annual. Build buyers who differ on budget authority and risk, then score each layout and price anchor. Walk away with a tier structure, a lead price, and which segment you’d be quietly losing — *before* three weeks of frontend work. *Spin-off: test packaging, trial length, or “contact us” vs self-serve.*
+
+2. **Co-founder segment fight** — Two founders want two different first markets. Generate eight personas split across both segments, ask the same value props, and let the scoreboard end the debate. No loudest-voice-in-the-room. *Spin-off: investor narrative stress-test, or “who do we fire as ICP?”*
+
+3. **Competitive war-gaming** — Turn each rival into a persona with their budget, priorities, and pride. Interview your ideal customers on switching triggers, deal-breakers, and the argument that actually moves them. You’ll know which objection to answer first on sales calls. *Spin-off: win/loss themes before you have real lost deals.*
+
+4. **Content that converts** — “Write for everyone” is writing for no one. Cast roles and seniorities, then ask what they’d click, skip, share, or mock. Get a calendar angle per persona and the phrases that make them bounce. *Spin-off: newsletter subject lines, conference talk abstracts, onboarding emails.*
+
+5. **Roadmap stakeholder theatre** — The board wants “user evidence.” Score the Q3 list across segments and show who wants what, with quotes. Better: use it to *cut* the list to three bets, then validate those with 5–10 real users. *Spin-off: RFC pushback simulation, procurement/security review cosplay.*
+
+6. **Landing page & CTA pressure test** — Five visitors, ten seconds each: what do they think you sell, what’s the first objection, which CTA earns a click? Cheap way to kill a clever-but-cryptic hero before launch. *Spin-off: onboarding friction, paywall wording, support macro tone.*
+
+7. **Hiring & job-branding** — Write a JD, then interview candidates who differ on stage of life and risk appetite. What scares them off, what actually sounds like growth? Useful before you post to three boards and wait. *Spin-off: offer negotiation scripts, internal mobility messaging.*
 
 **Personal / fun**
 
-6. **Game NPCs** — will these shopkeepers trust a suspicious hero?
-7. **Dinner party** — historical figures (or friends) on a topic: who derails the table?
-8. **Roast / critique** — five very different haters on your landing page or dating profile
-9. **Debate panel** — force disagreement; find the compromise or the fight
-10. **Story ensemble** — check whether a cast stays consistent across scenes
+8. **Game NPCs who can say no** — Shopkeepers, guards, fences with real incentives — not quest kiosks. Interview them on whether they’d help, rob, or report the hero. You’ll leave with loot tables of *attitude*: who needs a bribe, a favour, or a threat. *Spin-off: faction politics, boss monologue test, “would the village notice the missing relic?”*
+
+9. **Dinner party seating chart** — Five historical figures (or your actual friends) on AI, money, or whether a hot dog is a sandwich. Same questions, different worldviews. Golden combo = where to sit them so the night is interesting instead of a brawl. *Spin-off: family holiday negotiation, podcast guest mix, classroom debate set.*
+
+10. **Roast panel** — Five very different haters on your landing page, portfolio, or dating profile: the cynic, the busy parent, the design snob, the price-sensitive student, the “I don’t get it.” Leave with the line that dies first and the one that actually lands. *Spin-off: wedding speech, stand-up set, apology letter that isn’t cringe.*
+
+11. **Debate panel / decision under disagreement** — Need a fight, not consensus? Cast true believers on opposite sides and run the same proposal. Find the golden compromise — or the exact wedge that splits the room — before you run the real meeting. *Spin-off: policy options, “relocate or stay,” which friend to trust with the secret.*
+
+12. **Story & character continuity** — Keep a cast of 10–30 and ask follow-ups across scenes: who would lie here, who would crack, who would escalate? Cheap beta readers for motivation and consistency before you write the draft. *Spin-off: RPG campaign arcs, marketing mascot voice, alternate endings.*
+
+**Invent your own:** any decision where you’d like **ten consistent judges with names** — and a written summary — is in scope. If it’s a real-money or real-reputation call, use this to sharpen questions, then talk to humans.
 
 ## Install
 
