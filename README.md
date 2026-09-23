@@ -29,23 +29,24 @@ Same panel stays on the bench for follow-ups (“what jobs do they hire this for
 
 ## Samples (abridged)
 
-*“Split” = who scored high vs low. “Golden combo” = what won across the panel.*
+Two shapes. First is the full decision vignette; second is the skimmable version.
 
-**1 — Pricing** (10 buyers, meal kit $49/week)
+### Pricing — meal kit at $49/week
 
-| Question | Avg | Split |
-|----------|-----|-------|
-| Subscribe at $49/week? | 6.4 | Busy PM (8) vs student (3) |
+*10 buyers.* Busy parents lean yes; students don’t — **avg 6.4** (*busy PM 8 vs student 3*).
 
-- **Decision** — Pilot a 3-night plan; 4/10 asked for partial boxes. → *“I’d pay for three dinners, not seven.”* (P2, PM)
+> “I’d pay for three dinners, not seven.” — P2, PM
 
-**2 — Prioritisation** (8 buyers, B2B SaaS)
+**Decision:** Pilot a 3-night plan. 4/10 asked for partial boxes; full-week boxes will lose the student tier.
 
-| Question | Avg | Split |
-|----------|-----|-------|
-| Ship SSO in Q3? | 7.8 | IT lead (9) vs solo founder (5) |
+### Prioritisation — ship SSO in Q3?
 
-- **Decision** — SSO in the enterprise tier first. → *“I can’t sell to security without it.”* (P5, IT lead)
+**7.8/10** · IT lead 9 vs solo founder 5 · *8 buyers*  
+→ Put SSO in the **enterprise tier first**; don’t block self-serve on it.
+
+> “I can’t sell to security without it.” — P5, IT lead
+
+**Decision:** Enterprise-first SSO this quarter.
 
 ## Install
 
