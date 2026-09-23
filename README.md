@@ -1,21 +1,35 @@
-# Persona — customer interviews in minutes
+# Persona — decision evidence before you build
 
-**Customer interviews in minutes, not weeks** — synthetic personas, interviewed in character, delivered as a scored Markdown report with quotes and takeaways.
+Interview 5–10 synthetic buyers in Claude Code. Leave with **scores, quotes, and a ranked call** — before you book discovery or run the prioritisation meeting.
 
-For **indie founders & PMs** who need a call before real user research, and **writers & game makers** who want a cast that argues back. A Claude Code skill. Works worldwide.
+For **product managers and product owners** who are comfortable in Claude Code and need faster decision evidence than a gut-feel debate. Hypothesis generation, not market research.
 
-Synthetic results are **hypotheses, not proof**. Use them to rank and spot patterns; validate money decisions with real people.
+## When to use it
 
-## Why this skill (not a freeform prompt)
+| Job | You leave with |
+|-----|----------------|
+| **Pricing & packaging** | Tier structure, lead price, which segment you’d lose |
+| **Feature prioritisation** | Ranked bets + who wants what (and who doesn’t) |
+| **Segment / ICP fight** | A scoreboard so co-founders stop arguing from vibes |
+| **Positioning & messaging** | Which claim lands, which line bounces |
+| **Landing page / CTA** | What they think you sell in ten seconds, first objection, CTA that earns a click |
+| **Stakeholder prep** | Quote bank and “who disagrees” before the room |
 
-- **Diverse cast** — forced different jobs, budgets, and temperaments (not five clones who all love you)
-- **Honest scores** — mid scores, `unsure`, and refusals allowed; no cheerleading
-- **Guardrails** — fixed report shape + `scripts/check_report.py` blocks overclaims like “statistically significant”
-- **Named judges** — ten consistent people with voices, plus follow-ups on the same cast (no silent re-roll)
+*Also works for workshops and fictional casts (game NPCs, debate panels, roast sessions).*
+
+## What you get
+
+- **Decision memo** — ranked takeaways, each backed by counts (`6/10`) or a theme  
+- **Scoreboard** — avg / median / top-bottom split per question  
+- **Quote bank** — verbatim lines with persona ids (paste into the PRD or the deck)  
+- **Golden combo** — the option that won across the panel, plus who objected  
+- **Honesty footnote** — synthetic disclaimer so you can use this in a room without overclaiming  
+
+Same panel stays on the bench for follow-ups (“what jobs do they hire this for?”) unless you re-roll.
 
 ## Samples (abridged)
 
-*“Split” = who scored high vs low. “Golden combo” = what won across the cast.*
+*“Split” = who scored high vs low. “Golden combo” = what won across the panel.*
 
 **1 — Pricing** (10 buyers, meal kit $49/week)
 
@@ -23,23 +37,15 @@ Synthetic results are **hypotheses, not proof**. Use them to rank and spot patte
 |----------|-----|-------|
 | Subscribe at $49/week? | 6.4 | Busy PM (8) vs student (3) |
 
-- **Takeaway** — Pilot a 3-night plan; 4/10 asked for partial boxes. → *“I’d pay for three dinners, not seven.”* (P2, PM)
+- **Decision** — Pilot a 3-night plan; 4/10 asked for partial boxes. → *“I’d pay for three dinners, not seven.”* (P2, PM)
 
-**2 — Roadmap** (8 PMs, B2B SaaS features)
+**2 — Prioritisation** (8 buyers, B2B SaaS)
 
 | Question | Avg | Split |
 |----------|-----|-------|
 | Ship SSO in Q3? | 7.8 | IT lead (9) vs solo founder (5) |
 
-- **Takeaway** — SSO for the enterprise tier first. → *“I can’t sell to security without it.”* (P5, IT lead)
-
-**3 — Play** (6 fantasy NPCs, sell to a suspicious hero?)
-
-| Question | Avg | Split |
-|----------|-----|-------|
-| Sell to this hero? | 5.2 | Fence (9) vs temple merchant (2) |
-
-- **Takeaway** — Gate the magic shop behind a favour. → *“Heroes break things. Heroes don’t pay.”* (P4, Armorer)
+- **Decision** — SSO in the enterprise tier first. → *“I can’t sell to security without it.”* (P5, IT lead)
 
 ## Install
 
@@ -53,7 +59,7 @@ curl -fsSL https://raw.githubusercontent.com/47096/persona/main/scripts/check_re
 
 Requires [Claude Code](https://claude.ai/claude-code). Only `SKILL.md` + `scripts/` go in the skill folder — do **not** `git clone` this repo into `~/.claude/skills/persona`.
 
-Then in Claude Code: `/persona`, or describe what you want (see use cases below).
+Then in Claude Code: `/persona`, or describe the decision you’re making (see use cases below).
 
 ## Remove
 
@@ -61,79 +67,70 @@ Then in Claude Code: `/persona`, or describe what you want (see use cases below)
 rm -rf ~/.claude/skills/persona
 ```
 
-## Use cases
+## Use cases for PMs
 
-The pattern is always the same: **hire a cast → interview in character → leave with scores, quotes, and a golden combo.** Swap the cast and the questions. If it helps to hear ten different people react to a decision, this skill fits.
+Pattern: **hire a panel → interview in character → scores, quotes, and a decision you can defend.**
 
-**Commercial / business**
+1. **Pricing page before code** — You’re tempted to ship four tiers and an annual toggle. Score layouts and anchors on buyers with different budget power and risk. Leave with tier structure, lead price, and who you’d quietly lose — *before* three weeks of frontend. *Spin-off: trial length, packaging, self-serve vs “contact sales.”*
 
-1. **Pricing page before code** — You’re tempted to ship four tiers and a toggle for annual. Build buyers who differ on budget authority and risk, then score each layout and price anchor. Walk away with a tier structure, a lead price, and which segment you’d be quietly losing — *before* three weeks of frontend work. *Spin-off: test packaging, trial length, or “contact us” vs self-serve.*
+2. **Co-founder ICP fight** — Two markets, two founders, one first bet. Eight personas split across both, same value props, one scoreboard. Kills the loudest-voice debate. *Spin-off: investor narrative stress-test.*
 
-2. **Co-founder segment fight** — Two founders want two different first markets. Generate eight personas split across both segments, ask the same value props, and let the scoreboard end the debate. No loudest-voice-in-the-room. *Spin-off: investor narrative stress-test, or “who do we fire as ICP?”*
+3. **Competitive win themes** — Map rivals as buyers with budget and pride. Interview your ICP on switching triggers and deal-breakers. Know which objection to answer first on calls. *Spin-off: win/loss themes before you have lost deals.*
 
-3. **Competitive war-gaming** — Turn each rival into a persona with their budget, priorities, and pride. Interview your ideal customers on switching triggers, deal-breakers, and the argument that actually moves them. You’ll know which objection to answer first on sales calls. *Spin-off: win/loss themes before you have real lost deals.*
+4. **Message & content test** — Ask each role what they’d click, skip, or mock. Leave with a line per persona and the phrases that bounce. *Spin-off: launch email, conference abstract, onboarding copy.*
 
-4. **Content that converts** — “Write for everyone” is writing for no one. Cast roles and seniorities, then ask what they’d click, skip, share, or mock. Get a calendar angle per persona and the phrases that make them bounce. *Spin-off: newsletter subject lines, conference talk abstracts, onboarding emails.*
+5. **Roadmap cut, not theatre** — Score the Q3 list across segments with quotes. Use it to cut to three bets — then validate those with real users before the board deck. *Spin-off: RFC pushback, procurement/security review cosplay.*
 
-5. **Roadmap stakeholder theatre** — The board wants “user evidence.” Score the Q3 list across segments and show who wants what, with quotes. Better: use it to *cut* the list to three bets, then validate those with real users. *Spin-off: RFC pushback simulation, procurement/security review cosplay.*
+6. **Landing page pressure test** — Five visitors, ten seconds: what do they think you sell, first objection, which CTA converts. *Spin-off: paywall wording, support macro tone, empty-state copy.*
 
-6. **Landing page & CTA pressure test** — Five visitors, ten seconds each: what do they think you sell, what’s the first objection, which CTA earns a click? Cheap way to kill a clever-but-cryptic hero before launch. *Spin-off: onboarding friction, paywall wording, support macro tone.*
+7. **Hiring & job brand** — Interview candidates on what scares them off and what sounds like growth, before you post the JD. *Spin-off: offer narrative, internal mobility.*
 
-7. **Hiring & job-branding** — Write a JD, then interview candidates who differ on stage of life and risk appetite. What scares them off, what actually sounds like growth? Useful before you post to three boards and wait. *Spin-off: offer negotiation scripts, internal mobility messaging.*
+**Also useful (workshops & fiction)** — game NPCs who can refuse, dinner-party seating, roast panels, debate setups, story cast continuity. Same loop; lighter tone.
 
-**Personal / fun**
-
-8. **Game NPCs who can say no** — Shopkeepers, guards, fences with real incentives — not quest kiosks. Interview them on whether they’d help, rob, or report the hero. You’ll leave with loot tables of *attitude*: who needs a bribe, a favour, or a threat. *Spin-off: faction politics, boss monologue test, “would the village notice the missing relic?”*
-
-9. **Dinner party seating chart** — Five historical figures (or your actual friends) on AI, money, or whether a hot dog is a sandwich. Same questions, different worldviews. Golden combo = where to sit them so the night is interesting instead of a brawl. *Spin-off: family holiday negotiation, podcast guest mix, classroom debate set.*
-
-10. **Roast panel** — Five very different haters on your landing page, portfolio, or dating profile: the cynic, the busy parent, the design snob, the price-sensitive student, the “I don’t get it.” Leave with the line that dies first and the one that actually lands. *Spin-off: wedding speech, stand-up set, apology letter that isn’t cringe.*
-
-11. **Debate panel / decision under disagreement** — Need a fight, not consensus? Cast true believers on opposite sides and run the same proposal. Find the golden compromise — or the exact wedge that splits the room — before you run the real meeting. *Spin-off: policy options, “relocate or stay,” which friend to trust with the secret.*
-
-12. **Story & character continuity** — Keep a cast of 10–30 and ask follow-ups across scenes: who would lie here, who would crack, who would escalate? Cheap beta readers for motivation and consistency before you write the draft. *Spin-off: RPG campaign arcs, marketing mascot voice, alternate endings.*
-
-**Invent your own:** any decision where you’d like **ten consistent judges with names** — and a written summary — is in scope.
+**Invent your own:** any decision where **ten named judges + a written summary** would beat a hallway opinion.
 
 ## How it works
 
-Four phases: **GENERATE → INTERVIEW → REPORT → SUMMARY**. Research and play share the loop; tone changes, score honesty does not.
+Four phases: **GENERATE → INTERVIEW → REPORT → SUMMARY**.
 
 ### 1. Generate
 
-You bring `n`, questions, and a brief. The skill asks for anything missing.
+You bring panel size `n`, questions, and the decision brief. The skill asks for anything missing.
 
-Personas differ on **budget power, time pressure, temperament, and risk** — not just age and job title. Research (`n` 5–10) includes price-sensitive, time-poor, and risk-averse profiles. Play (5–12, ensembles to 30) includes a wildcard. Locale only if the brief needs it.
+Personas differ on **budget power, time pressure, temperament, and risk**. Research default: 5–10 with price-sensitive, time-poor, and risk-averse profiles. Play/workshop panels can run larger with a wildcard.
 
 ### 2. Interview
-
-Each persona answers every question in character:
 
 | Type | Answer |
 |------|--------|
 | **Scale** | 0–10 + 1–2 sentences tied to their goals/fears |
 | **Open** | 1–3 sentences in their voice |
 
-They can be wrong, biased, bored, or hostile. Mid scores, `unsure`, and refusal are real answers. Uniform 8–10 cheerleading is a bug.
+They can be wrong, biased, or hostile. Mid scores, `unsure`, and refusal count. Uniform 8–10 cheerleading is a bug.
 
 ### 3. Report
 
-1. **Executive summary** — headline, friction (or punchline), standout persona  
-2. **Scoreboard** — avg, median, top/bottom split  
-3. **Themes** — patterns with quotes and persona ids  
-4. **Takeaways** — ranked, backed by counts (`6/10`) or a theme  
-5. **Golden combos** — what won across the cast, plus who disagreed  
-6. **Footnote** — synthetic disclaimer; validate with real people before money or PR  
+Executive summary → scoreboard → themes (with quotes) → ranked takeaways → golden combos → footnote.
 
-Optional: `scripts/check_report.py` checks that skeleton and blocks overclaims.
+Optional: `scripts/check_report.py` checks that skeleton and blocks overclaims (“statistically significant” and friends).
 
 ### 4. Summary + follow-ups
 
-Cast overview, key findings, top takeaways, golden combos per question. Follow-ups stay on the same cast unless you ask for a re-roll.
+Cast overview, key findings, top takeaways, golden combos. Follow-ups stay on the same panel unless you ask for a re-roll.
+
+## Why this skill (not a freeform prompt)
+
+- **Diverse panel** — not five clones who all love the idea  
+- **Honest scores** — disagreement is data  
+- **Guardrails** — fixed report shape + overclaim checks you can take into a room  
+
+## In a PM week
+
+Mon: drop the brief and questions into Claude Code → same day: scoreboard + quotes → Thu prioritisation: show who scored what and who objected → **then** talk to 5–10 real users for the final call.
 
 ## Not for
 
-Published market-size stats, legal proof, or replacing live customer interviews. Use it to sharpen questions — then talk to humans.
+Published market-size stats, legal proof, or replacing live customer interviews. Use it to sharpen questions and rank options — then talk to humans.
 
 ## Feedback
 
