@@ -17,11 +17,11 @@ Synthetic results are **hypotheses, not proof**. Use them to rank and spot patte
 
 *“Split” = who scored high vs low. “Golden combo” = what won across the cast.*
 
-**1 — Pricing** (10 buyers, meal kit €49/week)
+**1 — Pricing** (10 buyers, meal kit $49/week)
 
 | Question | Avg | Split |
 |----------|-----|-------|
-| Subscribe at €49/week? | 6.4 | Busy PM (8) vs student (3) |
+| Subscribe at $49/week? | 6.4 | Busy PM (8) vs student (3) |
 
 - **Takeaway** — Pilot a 3-night plan; 4/10 asked for partial boxes. → *“I’d pay for three dinners, not seven.”* (P2, PM)
 
