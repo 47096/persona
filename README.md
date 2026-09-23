@@ -53,20 +53,13 @@ curl -fsSL https://raw.githubusercontent.com/47096/persona/main/scripts/check_re
 
 Requires [Claude Code](https://claude.ai/claude-code). Only `SKILL.md` + `scripts/` go in the skill folder — do **not** `git clone` this repo into `~/.claude/skills/persona`.
 
+Then in Claude Code: `/persona`, or describe what you want (see use cases above).
+
 ## Remove
 
 ```bash
 rm -rf ~/.claude/skills/persona
 ```
-
-## Usage
-
-In Claude Code: `/persona`, or just ask.
-
-- “Create 5 personas for a B2B accounting app targeting small business owners in Berlin”
-- “Generate personas and interview them on pricing sensitivity for $29/$99/$199”
-- “6 fantasy shopkeeper NPCs — would they sell to a suspicious hero?”
-- “Dinner party: 5 historical figures on AI. Who derails the table?”
 
 ## How it works
 
